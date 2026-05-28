@@ -12,7 +12,6 @@ const expenseRoutes = require("./routes/expenseRoutes.js")
 const dashboardRoutes = require("./routes/dashboardRoutes.js")
 
 const budgetRoutes = require("./routes/budgetRoutes.js")
-app.use("/api/v1/budget", budgetRoutes)
 
 // Middleware to handle CORS
 app.use(
@@ -32,6 +31,7 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/income", incomeRoutes);
 app.use("/api/v1/expense", expenseRoutes);
 app.use("/api/v1/dashboard", dashboardRoutes);
+app.use("/api/v1/budget", budgetRoutes)
 
 // Serve uploads folder
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
