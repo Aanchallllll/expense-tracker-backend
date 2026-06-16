@@ -19,7 +19,7 @@ app.use(
         origin: process.env.CLIENT_URL || "*",
         // This line tells your server who is allowed to make requests to it (like sending or getting data).
         methods: ["GET", "POST", "PUT", "DELETE"],
-        allowedHeaders: ["Content-type", "Authorization"],
+        allowedHeaders: ["Content-Type", "Authorization"],
     })
 )
 
